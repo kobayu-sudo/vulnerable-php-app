@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: vulnerable-php-app
+    runtime: php
+    buildCommand: php init-db.php
+    startCommand: php -S 0.0.0.0:10000
+    envVars:
+      - key: PHP_VERSION
+        value: 8.2
